@@ -42,7 +42,16 @@
 .item {
   box-sizing: border-box;
   flex-grow: 0;
-  flex-basis: 100%;
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.game_item {
+  box-sizing: border-box;
+  background-color: bisque;
+  flex-grow: 0;
+  flex-basis: 50%;
+  text-align: center;
 }
 
 .content {
@@ -124,6 +133,8 @@ form>* {
 
 .navbar-items {
   justify-content: space-between;
+  width: 100%;
+  text-align: center;
 }
 
 .navbar-menu ul {
@@ -141,11 +152,15 @@ form>* {
   display: flex;
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .navbar-logo a {
   color: var(--white);
   text-decoration: none;
+  flex-grow: 0;
+  flex-basis: 100%;
+  box-sizing: border-box;
 }
 
 #footer {

@@ -13,13 +13,22 @@ export default function IndexPage() {
   if (!data) return <Message content="No data could be loaded..." />
 
   // Just for convenience
-  const records = data.teams;
+  console.log(data)
+  const games = data.data;
 
   return (
     <>
       <div className="row">
-        {records.map(record => {
-          return <div key={record.id} className="item"><div className="content">{record.name}</div></div>
+        {games.map(game => {
+          return(
+             <div key={game.id} className="game_item">
+                <div className="content">
+                  <h2>{game.home_team.name} VS {game.visitor_team.name}</h2>
+                  <h3>{game.home_team_score} : {game.visitor_team_score}</h3>
+                  <p>{game.status}</p>
+                </div>
+             </div>
+          )
         })}
       </div>
     </>

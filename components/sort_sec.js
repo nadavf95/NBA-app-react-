@@ -13,7 +13,7 @@ export default function sort_sec() {
                     <option value="a-z">a-z</option>
                     <option value="top score">top score</option>
                 </select>
-        </div>
+            </div>
         );
   }
 }
