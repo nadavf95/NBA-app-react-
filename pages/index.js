@@ -1,6 +1,8 @@
 
 import Message from "../components/message";
 import { useApiData } from "../hooks/data";
+import Input_data_sec from "../components/input_data_sec";
+import Sort_sec from "../components/sort_sec";
 
 // Our main page. Here we are loading data "on the client"
 // And showing some loading screen(s) while waiting for the data to be ready
@@ -19,6 +21,7 @@ export default function IndexPage() {
   return (
     <>
       <div className="row">
+        <Sort_sec />
         {games.map(game => {
           return(
              <div key={game.id} className="game_item">
