@@ -3,7 +3,7 @@
 import { render } from "react-dom"
 
 // so it appears on all pages that use the default layout
-export default function sort_sec() {
+export default function Sort_sec() {
     return (
         <div class="content">
             <h3>sort by</h3>
