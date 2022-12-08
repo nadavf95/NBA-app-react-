@@ -9,8 +9,10 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 // You create your own use* function per API endpoint
 // And return a consistent response object that you can use to
 // showing loading and/or error screens
-export function useApiData() {
+export function useApiData(date) {
+  console.log("here!!!!!");
   const { data, error } = useSWR(API_ENDPOINT, fetcher)
+  console.log(error);
   return {
     data,
     isLoading: !error && !data,
