@@ -1,7 +1,7 @@
 
-export default function filter_sec({ children }) {
+export default function FilterSec() {
     return (
-        <div class="content">
+        <div className="content">
             <h3>coast</h3>
             <select id="data-filter">
                 <option value="none">none</option>
