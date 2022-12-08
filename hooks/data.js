@@ -1,6 +1,8 @@
 import useSWR from "swr";
 import { API_ENDPOINT } from "../config";
 
+import { useState } from "react";
+
 // UseSWR needs a fetcher function.
 // This is a generic one based on vanilla fetch().
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -19,3 +21,8 @@ export function useApiData(date) {
     isError: error
   }
 }
+
+export function useData({}) {
+  const [count, setCount] = useState(0);
+}
+

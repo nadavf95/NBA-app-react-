@@ -1,7 +1,16 @@
 import Message from "./components/message";
 import { useApiData } from "./hooks/data";
 
-export default function GetData(date, sort_val, filter_val) {
+export function ChangeHandler(func, key, value){
+  if (key ==="date"){
+    func(GetData(value));
+  }
+  else{
+    func(value);
+  }
+}
+
+export function GetData(date, sort_val, filter_val) {
   console.log("HERE!!!");
   const { data, isLoading, isError } = useApiData();
    
@@ -14,3 +23,5 @@ export default function GetData(date, sort_val, filter_val) {
   const games = data.data;
   return (games);
 }
+
+

@@ -1,27 +1,15 @@
 import FilterSec from "./filter_sec";
 import SortSec from "./sort_sec";
-import { useState } from "react";
+import { ChangeHandler } from "../utilities";
 
 
-export default function InputDataSec() {
-  const [dateValue, setDateValue] = useState(null);
-
-  function handleDateUpdate(e) {
-    const dateValue = e.target.value;
-    console.log("dateValue", dateValue);
-    setDateValue(dateValue);  // state variable updated here
-  }
+export default function InputDataSec({SetGames}, {SetSortKey}, {SetFilterKey}) {
   return (
     <div className="content">
-      <p>insert a date in a form of YYYY-MM-DD .</p>
       <span>Insert a date: </span>
-      <input type="date" onChange={(e) => handleDateUpdate(e)} />
-      
-      <button id="submit-button">
-        submit
-      </button>
-      <SortSec />
-      <FilterSec />
+      <input type="date" onChange={(e) => ChangeHandler(SetGames,"date",e)} />
+      <SortSec sort_func={SetSortKey}/>
+      <FilterSec filter_func={SetFilterKey}/>
     </div>
   );
 }
