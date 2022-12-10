@@ -2,16 +2,18 @@ import Message from "./components/message";
 import { useApiData } from "./hooks/data";
 
 export function ChangeHandler(func, key, value){
+  console.log("in handler key:  " + key + "  value:  " + value);
   if (key ==="date"){
-    func(GetData(value));
+    const games = GetData(value);
+    return games;
   }
   else{
-    func(value);
+    return value;
   }
 }
 
-export function GetData(date, sort_val, filter_val) {
-  console.log("HERE!!!");
+export function GetData(date) {
+  console.log("in get data!!!!!!!!!!!!!!!");
   const { data, isLoading, isError } = useApiData();
    
   if (isLoading) return <Message content="Loading..." />

@@ -5,9 +5,9 @@ import { ChangeHandler } from "../utilities";
 // so it appears on all pages that use the default layout
 export default function SortSec({sort_func}) {
     return (
-        <div className="content">
+        <div className="contentSort">
             <h3>sort by</h3>
-            <select value={"a-z"} onChange={(e) => ChangeHandler(sort_func,"sort",e)}>
+            <select value={"a-z"} onChange={(e) => ChangeHandler(sort_func,"date",e)}>
                 <option value="a-z">a-z</option>
                 <option value="top score">top score</option>
             </select>

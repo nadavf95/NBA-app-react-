@@ -168,6 +168,6 @@ form>* {
   margin-top: auto;
   background-color: var(--deep-blue);
   color: var(--white);
-  height: 200px;
+  height: 70px;
   border-top: 4px solid var(--deep-red);
 }
