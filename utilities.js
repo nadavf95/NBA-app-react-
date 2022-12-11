@@ -4,11 +4,10 @@ import { useApiData } from "./hooks/data";
 export function ChangeHandler(func, key, value){
   console.log("in handler key:  " + key + "  value:  " + value);
   if (key ==="date"){
-    const games = GetData(value);
-    return games;
+    func(GetData(value));
   }
   else{
-    return value;
+    func(value);
   }
 }
 
