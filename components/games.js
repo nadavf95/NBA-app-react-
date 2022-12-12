@@ -1,5 +1,9 @@
- 
-export function ShowGames(games, sort_key, filter_key) {
+ import { useApiData } from "../hooks/data"
+
+export function ShowGames(date, sort_key, filter_key) {
+
+  console.log("test");
+  const {data, isLoading, isError} = useApiData(date);
 
     return(
         // <div className="game_item">
