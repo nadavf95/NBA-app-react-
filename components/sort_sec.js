@@ -1,13 +1,9 @@
-// Just a generic Navbar, part of the default layout
 
-import { ChangeHandler } from "../utilities";
-
-// so it appears on all pages that use the default layout
-export default function SortSec({sort_func}) {
+export default function SortSec({ChangeHandler}) {
     return (
         <div className="contentSort">
             <h3>sort by</h3>
-            <select value={"a-z"} onChange={(e) => ChangeHandler(sort_func,"date",e)}>
+            <select value={"a-z"} onChange={(e) => ChangeHandler("sort",e.target.value)}>
                 <option value="a-z">a-z</option>
                 <option value="top score">top score</option>
             </select>

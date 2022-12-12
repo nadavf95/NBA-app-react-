@@ -7,8 +7,8 @@ export default function InputDataSec({ChangeHandler}) {
     <div className="content">
       <span>Insert a date: </span>
       <input type="date" onChange={(e) => ChangeHandler("date",e.target.value)} />
-      {/* <SortSec sort_func={SetSortKey}/>
-      <FilterSec filter_func={SetFilterKey}/> */}
+      <SortSec ChangeHandler={ChangeHandler}/>
+      <FilterSec ChangeHandler={ChangeHandler}/>
     </div>
   );
 }

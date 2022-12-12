@@ -14,7 +14,7 @@ export default function IndexPage() {
   let currentDate = `${year}-${month}-${day}`;
 
 
-  const [date, setDate] = useState("2022-12-10");
+  const [date, setDate] = useState(currentDate);
   const [sort_key, setSortKey] = useState("a-z");
   const [filter_key, setFilterKey] = useState("none");
 

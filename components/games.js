@@ -6,6 +6,7 @@ export function ShowGames({date, sort_key, filter_key}) {
     const {data, isLoading, isError} = useApiData(date);
     if (data){
         const games = data.data
+        
         return(
             <div className="game_item">
                 {games.map(game => {

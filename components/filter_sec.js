@@ -1,11 +1,10 @@
 
-import { ChangeHandler } from "../utilities";
 
-export default function FilterSec({filter_func}) {
+export default function FilterSec({ChangeHandler}) {
     return (
         <div className="contentFIlter">
             <h3>coast</h3>
-            <select value={"none"} onChange={(e) => ChangeHandler(filter_func,"filter",e)}>
+            <select value={"none"} onChange={(e) => ChangeHandler("filter",e.target.value)}>
                 <option value="none">none</option>
                 <option value="East">East</option>
                 <option value="West">West</option>
