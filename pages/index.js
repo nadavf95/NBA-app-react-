@@ -1,7 +1,6 @@
 import InputDataSec from "../components/input_data_sec";
 import { ShowGames } from "../components/games";
 import { useState } from "react";
-import { useApiData } from "../hooks/data";
 
 // Our main page. Here we are loading data "on the client"
 // And showing some loading screen(s) while waiting for the data to be ready

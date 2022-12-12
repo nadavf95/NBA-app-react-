@@ -10,17 +10,15 @@ const fetcher = (...args) => fetch(...args).then(res => res.json());
 // And return a consistent response object that you can use to
 // showing loading and/or error screens
 export function useApiData(date) {
-  console.log("date: " + date);
   const { data, error } = useSWR(API_ENDPOINT + date, fetcher);
   if (error){
-    console.log(error);
     console.log(error);  
   }
   if (!data){
     console.log("no data");
   }
   if (data){
-    console.log("data");
+    console.log("data fetched");
     console.log(data);
   }
 

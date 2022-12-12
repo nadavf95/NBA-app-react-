@@ -1,11 +1,13 @@
  import { useApiData } from "../hooks/data"
+ import { gamesFilterFunc } from "../utilities";
+ import { gamesSortFunc } from "../utilities";
 
 export function ShowGames({date, sort_key, filter_key}) {
 
-    console.log("test");
     const {data, isLoading, isError} = useApiData(date);
     if (data){
-        const games = data.data
+        const games = data.data;
+        // var games_copy = gamesSortFunc(gamesFilterFunc(games, filter_key), sort_key);
         
         return(
             <div className="game_item">
