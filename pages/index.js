@@ -7,17 +7,16 @@ import { useApiData } from "../hooks/data";
 // And showing some loading screen(s) while waiting for the data to be ready
 export default function IndexPage() {
   
-  // const c_date = new Date();
-  // let day = c_date.getDate();
-  // let month = c_date.getMonth() + 1;
-  // let year = c_date.getFullYear();
-  // let currentDate = `${year}-${month}-${day}`;
+  const c_date = new Date();
+  let day = c_date.getDate();
+  let month = c_date.getMonth() + 1;
+  let year = c_date.getFullYear();
+  let currentDate = `${year}-${month}-${day}`;
 
 
-  const [date, setDate] = useState("none");
+  const [date, setDate] = useState("2022-12-10");
   const [sort_key, setSortKey] = useState("a-z");
   const [filter_key, setFilterKey] = useState("none");
-  // setDate(currentDate);
 
   function ChangeHandler(key, value){
     console.log("in handler key:  " + key + "  value:  " + value);
