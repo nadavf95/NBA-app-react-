@@ -13,9 +13,9 @@ export default function IndexPage() {
   let currentDate = `${year}-${month}-${day}`;
 
 
-  const [date, setDate] = useState(currentDate);
   const [sort_key, setSortKey] = useState("a-z");
   const [filter_key, setFilterKey] = useState("none");
+  const [date, setDate] = useState(currentDate);
 
   function ChangeHandler(key, value){
     console.log("in handler key:  " + key + "  value:  " + value);

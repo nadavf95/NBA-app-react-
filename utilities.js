@@ -1,7 +1,7 @@
 
 
 export function gamesSortFunc({games, sort_key}){
-    console.log(" in sort func");
+    console.log(" in sort func, sort_key: " + sort_key);
     if(games){
         games.sort((a,b) => {
             if (sort_key === "a-z"){
@@ -16,23 +16,19 @@ export function gamesSortFunc({games, sort_key}){
 }
 
 export function gamesFilterFunc({games, filter_key}){
-    console.log(" in filter func");
+    // people.filter(person => person.age < 60).map(filteredPerson => (
+    console.log(" in filter func, filter_key: " + filter_key);
+    let filterd_games = []
     if (games){
-        games.filter(
-            function(game){
+        games.filter(game => {
                 if (filter_key === "none"){
                     return true;
                 }
-                else if (game.home_team.conference === filter_key) {
-                    return true;
-                }
-                else {
-                    return false;
-                } 
+                return (game.home_team.conference === filter_key);
             }
-        );
+        ).map(filtered_game => (filterd_games.push(filtered_game)));
     }
-    return games;
+    return filterd_games;
 }
 
 
