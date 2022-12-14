@@ -50,7 +50,7 @@
   display:inline-block;
   width: 100px;
   box-sizing: border-box;
-  background-color: bisque;
+  background-color: #ffe4c4;
   flex-grow: 0;
   flex-basis: 100%;
   min-width: 50%;
