@@ -7,7 +7,9 @@ export default function Document() {
   return (
     <Html>
       <Head />
-      <body>
+      <body style={{ 
+      backgroundImage: `url("https://i.cbc.ca/1.5443354.1580238594!/fileImage/httpImage/bryant-logo.jpg")`
+    }}>
         <Main />
         <NextScript />
       </body>
