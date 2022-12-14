@@ -8,7 +8,7 @@ export default function Document() {
     <Html>
       <Head />
       <body style={{ 
-      backgroundImage: `url("https://i.cbc.ca/1.5443354.1580238594!/fileImage/httpImage/bryant-logo.jpg")`
+      backgroundImage: `url("https://cdn.nba.com/manage/2021/10/GettyImages-1228132003.png")`
     }}>
         <Main />
         <NextScript />
