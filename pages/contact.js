@@ -37,18 +37,19 @@ export default function ContactPage() {
 
   return (
     <div className="row">
-      <div className="item">
-        <div className="content">
-          Contact us if you found any mistakes or missing data, or if you just want to say hello!
-        </div>
-        <div className="content">
-          <form onSubmit={handleSubmit}>
-            <input id="form-name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
-            <input id="form-email" type="email" placeholder="Your email" value={formData.email} onChange={handleChange} required />
-            <textarea id="form-comment" placeholder="Your comment" value={formData.comment} onChange={handleChange}></textarea>
-            <button type="submit">Send</button>
-          </form>
-        </div>
+      <div className="contact_content">
+        <h1>we are here!</h1>
+        <h3>Contact us if you found any mistakes or missing data, or anything else</h3>
+        Here, in NBA LIVE SCORE, clinets are more than welcome to shere theirs expirence.
+        we providing you an easy form for let as know how was your expirence in our website.
+      </div>
+      <div className="contact_content">
+        <form onSubmit={handleSubmit}>
+          <input id="form-name" placeholder="Your name" value={formData.name} onChange={handleChange} required />
+          <input id="form-email" type="email" placeholder="Your email" value={formData.email} onChange={handleChange} required />
+          <textarea id="form-comment" placeholder="Your comment" value={formData.comment} onChange={handleChange}></textarea>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div >
   )

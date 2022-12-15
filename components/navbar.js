@@ -15,6 +15,14 @@ export default function Navbar() {
               <Link href="/">NBA-LIVE-SCORE</Link>
             </div>
           </div>
+          <div className="item navbar-menu">
+            <div className="content">
+              <ul>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
